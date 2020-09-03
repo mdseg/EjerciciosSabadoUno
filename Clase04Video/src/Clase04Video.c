@@ -16,15 +16,15 @@
 
 int main(void) {
 	setbuf(stdout,NULL);
-	float resultado;
-	int numero1;
-	int numero2;
+
+
 	int respuesta;
 	int edad;
-	int peso;
+
+	char caracter;
 
 
-	respuesta = utn_getNumero(&edad, "Edad?\n","Error, la edad debe ser desde 0 a 199\n",0,199,2);
+	/*respuesta = utn_getNumero(&edad, "Edad?\n","Error, la edad debe ser desde 0 a 199\n",0,199,2);
 	if(respuesta == 0)
 	{
 		printf("La edad es: %d",edad);
@@ -33,7 +33,16 @@ int main(void) {
 	{
 		printf("Error");
 	}
-
+*/
+	respuesta = utn_getCaracter(&caracter, "letra?\n","Error, elija un simbolo del codigo ASCII\n",0,255,2);
+	if(respuesta == 0)
+	{
+		printf("El simbolo es: %d",caracter);
+	}
+	else
+	{
+		printf("Error");
+	}
 	/*respuesta = utn_getNumero(&peso, "Peso=\n", "Error, el peso ingresado debe ser de 0 a 500", 0, 500,2);
 	if(respuesta == 0)
 	{
